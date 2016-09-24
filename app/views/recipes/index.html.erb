@@ -1,0 +1,14 @@
+<h1>Todas as receitas</h1>
+
+<section class="recipes row">
+  <% @recipes.each do |recipe| %>
+    <article class="recipe col-md-6 text-center">
+      <%= link_to recipe do %>
+        <h3><%= recipe.name %></h3>
+      <% end %>
+      <p>Cozinha: <%= recipe.cuisine %></p>
+      <p>Tipo de comida: <%= recipe.kind %></p>
+      <p>Tempo de preparo: <%= recipe.time %></p>
+    </article>
+  <% end %>
+</section>

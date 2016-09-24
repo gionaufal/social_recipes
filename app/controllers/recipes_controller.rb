@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
   def new
     @recipe = Recipe.new
-    @levels = ['Fácil', 'Médio', 'Difícil']
+    @levels = %w(Fácil Médio Difícil)
   end
 
   def create
@@ -18,10 +18,14 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
   end
 
+  def index
+    @recipes = Recipe.all
+  end
+
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :cuisine, :kind, :serves,:time,
+    params.require(:recipe).permit(:name, :cuisine, :kind, :serves, :time,
                                    :ingredients, :level, :steps)
   end
 end
