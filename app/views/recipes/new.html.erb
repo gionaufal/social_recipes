@@ -1,0 +1,13 @@
+<h1>Nova receita</h1>
+
+<%= simple_form_for @recipe do |f| %>
+  <%= f.input :name, label: 'Nome da receita' %>
+  <%= f.input :cuisine, label: 'Cozinha' %>
+  <%= f.input :kind, label: 'Tipo de comida' %>
+  <%= f.input :serves, label: 'Quantas pessoas serve' %>
+  <%= f.input :time, label: 'Tempo de preparo' %>
+  <%= f.input :level, collection: @levels, label: 'Nível de dificuldade' %>
+  <%= f.input :ingredients, label: 'Ingredientes' %>
+  <%= f.input :steps, label: 'Passo a passo' %>
+  <%= f.button :submit, 'Criar receita' %>
+<% end %>
