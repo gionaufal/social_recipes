@@ -9,5 +9,6 @@
   <%= f.input :level, collection: @levels, label: 'Nível de dificuldade' %>
   <%= f.input :ingredients, label: 'Ingredientes' %>
   <%= f.input :steps, label: 'Passo a passo' %>
+  <%= f.input :image, as: :file %>
   <%= f.button :submit, 'Criar receita' %>
 <% end %>
