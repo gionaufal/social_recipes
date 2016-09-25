@@ -6,7 +6,7 @@
       <%= link_to recipe do %>
         <h3><%= recipe.name %></h3>
       <% end %>
-      <p>Cozinha: <%= recipe.cuisine %></p>
+      <p>Cozinha: <%= recipe.cuisine.name %></p>
       <p>Tipo de comida: <%= recipe.kind %></p>
       <p>Tempo de preparo: <%= recipe.time %></p>
     </article>

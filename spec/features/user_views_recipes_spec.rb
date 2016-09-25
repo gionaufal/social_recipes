@@ -7,7 +7,7 @@ feature 'User views recipes' do
     visit recipes_path
 
     expect(page).to have_content recipe.name
-    expect(page).to have_content recipe.cuisine
+    expect(page).to have_content recipe.cuisine.name
     expect(page).to have_content recipe.kind
 
     click_on recipe.name

@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :recipe do
     name 'Petit Gateau'
-    cuisine 'Francesa'
+    cuisine
     kind 'Sobremesa'
     serves 4
     time 35

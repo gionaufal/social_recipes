@@ -2,11 +2,12 @@ require 'rails_helper'
 
 feature 'User creates a recipe' do
   scenario 'successfully' do
+    recipe = build(:recipe)
+
     visit new_recipe_path
 
-    recipe = create(:recipe)
     fill_in 'Nome da receita',        with: recipe.name
-    fill_in 'Cozinha',                with: recipe.cuisine
+    select recipe.cuisine.name,       from: 'Cozinha'
     fill_in 'Tipo de comida',         with: recipe.kind
     fill_in 'Quantas pessoas serve',  with: recipe.serves
     fill_in 'Tempo de preparo',       with: recipe.time
@@ -17,7 +18,7 @@ feature 'User creates a recipe' do
     click_on 'Criar receita'
 
     expect(page).to have_content recipe.name
-    expect(page).to have_content recipe.cuisine
+    expect(page).to have_content recipe.cuisine.name
     expect(page).to have_content recipe.kind
     expect(page).to have_content recipe.serves
     expect(page).to have_content recipe.time
