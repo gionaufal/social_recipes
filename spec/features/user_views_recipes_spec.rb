@@ -8,7 +8,7 @@ feature 'User views recipes' do
 
     expect(page).to have_content recipe.name
     expect(page).to have_content recipe.cuisine.name
-    expect(page).to have_content recipe.kind
+    expect(page).to have_content recipe.dish.name
 
     click_on recipe.name
 

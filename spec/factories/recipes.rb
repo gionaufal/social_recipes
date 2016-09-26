@@ -2,7 +2,7 @@ FactoryGirl.define do
   factory :recipe do
     name 'Petit Gateau'
     cuisine
-    kind 'Sobremesa'
+    dish
     serves 4
     time 35
     level 'Médio'
