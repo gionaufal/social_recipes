@@ -1,5 +1,16 @@
 <div class="row">
-  <section class="recipes row">
-    <%= render @recipes %>
+  <section class="recipes col-md-8">
+    <div class="row">
+      <%= render @recipes %>
+    </div>
   </section>
+
+  <aside class="col-md-4">
+    <h3>Cozinhas</h3>
+    <ul>
+      <% @cuisines.each do |cuisine| %>
+        <li><%= link_to cuisine.name, cuisine %></li>
+      <% end %>
+    </ul>
+  </aside>
 </div>
