@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @recipes =
+    @recipes = Recipe.order(created_at: :desc).first(20)
   end
 
 end

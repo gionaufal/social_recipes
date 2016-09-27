@@ -6,7 +6,7 @@ FactoryGirl.define do
     serves 4
     time 35
     level 'Médio'
-    ingredients 'Ingrediente 1, Ingrediente 2, Ingrediente 3'
+    ingredients "Ingrediente 1, ingrediente 2, ingrediente 3"
     steps 'Passo 1, Passo 2, Passo 3'
   end
 end
