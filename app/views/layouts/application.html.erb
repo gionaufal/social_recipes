@@ -19,6 +19,12 @@
       <% if flash[:notice] %>
         <%= flash[:notice]  %>
       <% end %>
+      <% if flash[:alert] %>
+        <%= flash[:alert]  %>
+      <% end %>
+      <% if user_signed_in? %>
+        <p>Olá, <%= current_user.email %></p>
+      <% end %>
       <%= yield %>
     </div>
   </body>
