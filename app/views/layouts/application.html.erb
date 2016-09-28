@@ -24,6 +24,8 @@
       <% end %>
       <% if user_signed_in? %>
         <p>Olá, <%= current_user.email %></p>
+      <% else %>
+        <p><%= link_to 'Login', new_user_session_path %></p>
       <% end %>
       <%= yield %>
     </div>
